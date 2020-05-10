@@ -1,0 +1,30 @@
+import telebot
+
+# keyboards creating
+keyboard1 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard1.row('Перемены в жизни', 'Очищение/Чистка')
+keyboard1.row('Эмоциональная стабилизация', 'Любовь/Отношения')
+keyboard1.row('Финансы')
+keyboard1.row('Связаться с мастером ')
+keyboard2 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard2.row('Перезагрузка реальности', 'Исполнение желаний')
+keyboard2.row('Свеча-прорыв')
+keyboard2.row('Назад', 'Связаться с мастером')
+keyboard3 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard3.row('Полынный сет', 'Универсальная чистка')
+keyboard3.row('В разработке')
+keyboard3.row('Назад', 'Связаться с мастером')
+keyboard4 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard4.row('Успокоение', 'Молитва')
+keyboard4.row('От тяжких дум')
+keyboard4.row('Назад', 'Связаться с мастером')
+keyboard5 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard5.row('Сладкая парочка', 'Привлечение любви')
+keyboard5.row('Гармонизация отношений')
+keyboard5.row('Назад', 'Связаться с мастером')
+keyboard6 = telebot.types.ReplyKeyboardMarkup(True)
+keyboard6.row('Денежная', 'Чистка фин.потока')
+keyboard6.row('Финансовый успех')
+keyboard6.row('Назад', 'Связаться с мастером')
+
+

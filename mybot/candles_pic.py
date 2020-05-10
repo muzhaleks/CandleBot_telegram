@@ -1,0 +1,16 @@
+REALITY_RESTART_PIC = open('../resources/reality_restart.jpg', 'rb')
+WISH_SET_PIC = open('../resources/wish_set.jpg', 'rb')
+BREAKTHROUGH_CANDLE_PIC = open('../resources/breakthrough.jpg', 'rb')
+POLYN_SET_PIC = open('../resources/polyn_set.jpg', 'rb')
+CLEAR_SET_PIC = open('../resources/clear_set.jpg', 'rb')
+KEEP_CALM_PIC = open('../resources/keep_calm.jpg', 'rb')
+STRONGER_PRAY_CANDLE_PIC = open('../resources/strong_pray.jpg', 'rb')
+LIGHT_MY_MIND_SET_PIC = open('../resources/light_my_mind.jpg', 'rb')
+LOVE_HARMONISATION_SET_PIC = open('../resources/love_harmonisation.jpg', 'rb')
+LOVE_MAKE_CANDLE_PIC = open('../resources/make_love.jpg', 'rb')
+SWEET_COUPLE_SET_PIC = open('../resources/sweet_couple.jpg', 'rb')
+GIVE_ME_MONEY_CANDLE_PIC = open('../resources/give_me_money.jpg', 'rb')
+CLEAN_MY_MONEY_PIC = open('../resources/clean_my_money.jpg', 'rb')
+FINANCIAL_SUCCESS_SET_PIC = open('../resources/make_money_set.jpg', 'rb')
+
+
