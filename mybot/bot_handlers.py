@@ -1,7 +1,8 @@
 from mybot.bot import bot
-from mybot.messages import *
-from mybot.keyboards import *
 from mybot.candles_pic import *
+from mybot.keyboards import *
+from mybot.messages import *
+from memory_profiler import profile
 
 
 @bot.message_handler(commands=['start'])
@@ -10,7 +11,7 @@ def welcome_message(message):
 
 
 @bot.message_handler(content_types=['text'])
-def send_text_one(message):
+def send_text(message):
     text = 'Найдём нужное?'
     back = 'Возвращаемся назад...'
     if message.text.lower() == 'перемены в жизни':
@@ -72,7 +73,7 @@ def send_text_one(message):
     elif message.text.lower() == 'финансовый успех':
         bot.send_photo(message.chat.id, FINANCIAL_SUCCESS_SET_PIC)
         bot.send_message(message.chat.id, FINANCIAL_SUCCESS_SET)
-
+     
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
