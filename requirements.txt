@@ -29,7 +29,6 @@ pyparsing==2.4.7
 pyTelegramBotAPI==3.6.7
 python-rex==0.4
 python-telegram-bot==12.6.1
-pywin32==227
 requests==2.22.0
 six==1.14.0
 telebot==0.0.3
