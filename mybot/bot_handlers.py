@@ -2,12 +2,11 @@ from mybot.bot import bot
 from mybot.candles_pic import *
 from mybot.keyboards import *
 from mybot.messages import *
-from memory_profiler import profile
 
 
 @bot.message_handler(commands=['start'])
 def welcome_message(message):
-    bot.send_message(message.chat.id, message.from_user.first_name + HELLO_MESSAGE, reply_markup=keyboard1)
+    bot.send_message(message.chat.id, message.from_user.first_name + HELLO_MESSAGE, reply_markup=keyboard_for_page_one)
 
 
 @bot.message_handler(content_types=['text'])
@@ -15,19 +14,19 @@ def send_text(message):
     text = 'Найдём нужное?'
     back = 'Возвращаемся назад...'
     if message.text.lower() == 'перемены в жизни':
-        bot.send_message(message.chat.id, text, reply_markup=keyboard2)
+        bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_two)
     elif message.text.lower() == 'очищение/чистка':
-        bot.send_message(message.chat.id, text, reply_markup=keyboard3)
+        bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_three)
     elif message.text.lower() == 'эмоциональная стабилизация':
-        bot.send_message(message.chat.id, text, reply_markup=keyboard4)
+        bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_four)
     elif message.text.lower() == 'любовь/отношения':
-        bot.send_message(message.chat.id, text, reply_markup=keyboard5)
+        bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_five)
     elif message.text.lower() == 'финансы':
-        bot.send_message(message.chat.id, text, reply_markup=keyboard6)
+        bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_six)
     elif message.text.lower() == 'связаться с мастером':
         bot.send_contact(message.chat.id, MASTER_PHONE, MASTER_NAME)
     elif message.text.lower() == 'назад':
-        bot.send_message(message.chat.id, back, reply_markup=keyboard1)
+        bot.send_message(message.chat.id, back, reply_markup=keyboard_for_page_one)
     elif message.text.lower() == 'перезагрузка реальности':
         bot.send_photo(message.chat.id, REALITY_RESTART_PIC)
         bot.send_message(message.chat.id, REALITY_RESTART)
@@ -73,7 +72,7 @@ def send_text(message):
     elif message.text.lower() == 'финансовый успех':
         bot.send_photo(message.chat.id, FINANCIAL_SUCCESS_SET_PIC)
         bot.send_message(message.chat.id, FINANCIAL_SUCCESS_SET)
-     
+
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
