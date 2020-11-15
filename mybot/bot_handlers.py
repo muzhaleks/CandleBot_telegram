@@ -9,9 +9,20 @@ def welcome_message(message):
     bot.send_message(message.chat.id, message.from_user.first_name + HELLO_MESSAGE, reply_markup=keyboard_for_page_one)
 
 
+@bot.message_handler(commands=['start'])
+def get_user(message):
+    user_id = message.from_user.id
+    user_first_name = message.from_user.first_name
+    user_last_name = message.from_user.last_name
+    user_nick = message.from_user.username
+    print(user_id, user_first_name, user_last_name)
+    print(user_nick)
+
+
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    text = 'Найдём нужное?'
+    text = 'Найдём нужное?\n' \
+           'Выберите ниже, что вас интересует'
     back = 'Возвращаемся назад...'
     if message.text.lower() == 'перемены в жизни':
         bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_two)
@@ -42,9 +53,9 @@ def send_text(message):
     elif message.text.lower() == 'универсальная чистка':
         bot.send_photo(message.chat.id, CLEAR_SET_PIC)
         bot.send_message(message.chat.id, CLEAR_SET)
-    elif message.text.lower() == 'в разработке':
-        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAJXcV6ljcfnctqSkey5SBKG6Qo1XEQ3AAKoAAPMVEkJBk94075aEAMZBA')
-        bot.send_message(message.chat.id, 'Скоро здесь что-то будет)))')
+    elif message.text.lower() == 'сет очищение и наполнение':
+        bot.send_photo(message.chat.id, CLEANING_AND_FILLING_SET_PIC)
+        bot.send_message(message.chat.id, CLEANING_AND_FILLING_SET)
     elif message.text.lower() == 'успокоение':
         bot.send_photo(message.chat.id, KEEP_CALM_PIC)
         bot.send_message(message.chat.id, KEEP_CALM_CANDLE)
@@ -72,6 +83,11 @@ def send_text(message):
     elif message.text.lower() == 'финансовый успех':
         bot.send_photo(message.chat.id, FINANCIAL_SUCCESS_SET_PIC)
         bot.send_message(message.chat.id, FINANCIAL_SUCCESS_SET)
+    else:
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAEBk99fr-5mcXXsyGO250Vf-HMXcF93HAACmgUAAj-VzApaohpZw_PTvh4E')
+        bot.send_message(message.chat.id, 'Моя не понимать! '
+                                          '\nНажмите кнопку на клавиатуре ниже)))',
+                         reply_markup=keyboard_for_page_one)
 
 
 if __name__ == '__main__':

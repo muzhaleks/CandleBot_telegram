@@ -26,3 +26,5 @@ with open('../resources/clean_my_money.jpg', 'rb') as clean_my_money_pic:
     CLEAN_MY_MONEY_PIC = clean_my_money_pic.read()
 with open('../resources/make_money_set.jpg', 'rb') as financial_success_set_pic:
     FINANCIAL_SUCCESS_SET_PIC = financial_success_set_pic.read()
+with open('../resources/cleaning_and_filling_set_pic.jpg', 'rb') as cleaning_and_filling_set_pic:
+    CLEANING_AND_FILLING_SET_PIC = cleaning_and_filling_set_pic.read()
