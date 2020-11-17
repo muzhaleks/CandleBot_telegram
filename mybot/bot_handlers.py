@@ -1,5 +1,3 @@
-import telebot
-import configparser
 from mybot.candles_pic import *
 from mybot.keyboards import *
 from mybot.messages import *
