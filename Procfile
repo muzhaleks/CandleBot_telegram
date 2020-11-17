@@ -1,1 +1,1 @@
-web: python ../CandleBot_telegam/mybot/bot_handlers.py
+web: python bot_handlers.py
