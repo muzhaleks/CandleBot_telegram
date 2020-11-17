@@ -1,7 +1,14 @@
-from mybot.bot import bot
+import telebot
+import configparser
 from mybot.candles_pic import *
 from mybot.keyboards import *
 from mybot.messages import *
+
+
+config = configparser.ConfigParser()
+config.read('config.ini', encoding='utf-8')
+bot = telebot.TeleBot(config['DEFAULT']['TOKEN'])
+print(bot.get_me())
 
 
 @bot.message_handler(commands=['start'])

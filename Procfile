@@ -1,1 +1,1 @@
-web: python CandleBot_telegram
+web:python bot_handlers.py
