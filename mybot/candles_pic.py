@@ -6,7 +6,8 @@ with open('../resources/breakthrough.jpg', 'rb') as breakthrough_candle_pic:
     BREAKTHROUGH_CANDLE_PIC = breakthrough_candle_pic.read()
 with open('../resources/polyn_set.jpg', 'rb') as polyn_set_pic:
     POLYN_SET_PIC = polyn_set_pic.read()
-
+with open("../resources/clear_set_pic.jpg", 'rb') as clear_set_pic:
+    CLEAR_SET_PIC = clear_set_pic.read()
 with open('../resources/keep_calm.jpg', 'rb') as keep_calm_pic:
     KEEP_CALM_PIC = keep_calm_pic.read()
 with open('../resources/strong_pray.jpg', 'rb') as stronger_pray_candle_pic:
