@@ -1,12 +1,23 @@
 from mybot.candles_pic import *
 from mybot.keyboards import *
 from mybot.messages import *
-
+import requests
 
 config = configparser.ConfigParser()
 config.read('config.ini', encoding='utf-8')
 bot = telebot.TeleBot(config['DEFAULT']['TOKEN'])
 print(bot.get_me())
+
+
+def get_updates_json(request):
+    response = requests.get(request + 'getUpdates')
+    return response.json()
+
+
+def last_update(data):
+    results = data['result']
+    total_updates = len(results) - 1
+    return results[total_updates]
 
 
 @bot.message_handler(commands=['start'])
