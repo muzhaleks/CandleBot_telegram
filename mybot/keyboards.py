@@ -1,4 +1,4 @@
-import telebot
+import telebot.types
 
 # keyboards creating
 keyboard_for_page_one = telebot.types.ReplyKeyboardMarkup(True)
