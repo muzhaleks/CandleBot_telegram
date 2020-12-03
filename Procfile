@@ -1,1 +1,1 @@
-web: python mybot/bot_handlers.py
+bot: python mybot/bot_handlers.py
