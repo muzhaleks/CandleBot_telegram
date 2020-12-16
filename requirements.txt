@@ -29,7 +29,7 @@ pyparsing==2.4.7
 pyTelegramBotAPI==3.7.3
 python-rex==0.4
 python-telegram-bot==13.0
-requests==2.7.0
+requests==2.20.0
 six==1.15.0
 telebot==0.0.3
 tornado==6.1
