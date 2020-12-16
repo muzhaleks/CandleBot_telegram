@@ -38,7 +38,7 @@ def send_text(message):
         bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_five)
     elif message.text.lower() == 'финансы':
         bot.send_message(message.chat.id, text, reply_markup=keyboard_for_page_six)
-    elif message.text.lower() == 'связаться с мастером':
+    elif message.text.lower() == 'купить':
         bot.send_contact(message.chat.id, MASTER_PHONE, MASTER_NAME)
     elif message.text.lower() == 'назад':
         bot.send_message(message.chat.id, back, reply_markup=keyboard_for_page_one)
